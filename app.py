@@ -121,6 +121,7 @@ def build_figure(df_plot: pd.DataFrame):
             "qual_score": "Quality Score",
         },
         size_max=40,
+        height=900
     )
 
     # --- reference point: fixed-size marker so it never blacks out the plot ---
