@@ -124,8 +124,7 @@ def build_figure(df_plot: pd.DataFrame):
         height=900
     )
 
-    # --- reference point: fixed-size marker so it never blacks out the plot ---
-    # Use the same sizeref as the main trace so the bubble is scaled consistently
+    # --- reference point: fixed-size marker 
     if len(fig.data) > 0 and hasattr(fig.data[0].marker, "sizeref"):
         sizeref = fig.data[0].marker.sizeref
     else:
