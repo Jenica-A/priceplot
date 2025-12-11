@@ -10,9 +10,9 @@ st.set_page_config(page_title="Quality vs Price", layout="wide")
 st.title("📊 Product Quality vs List Price")
 
 # -------------------------------------------------------------------
-# 1. Load your data
+# 1. Load data
 # -------------------------------------------------------------------
-# Option A: load from a CSV (replace with your actual file/path)
+# Option A: load from a CSV (replace with actual file/path)
 # df_plot = pd.read_csv("your_file.csv")
 
 # Option B (recommended for flexibility): upload in the UI
@@ -25,7 +25,7 @@ if uploaded_file is None:
 df_plot = pd.read_csv(uploaded_file)
 
 # -------------------------------------------------------------------
-# 2. Build the figure (your original logic, wrapped in a function)
+# 2. Build the figure 
 # -------------------------------------------------------------------
 def build_figure(df_plot: pd.DataFrame):
     # --- prep a clean working copy ---
@@ -161,7 +161,7 @@ def build_figure(df_plot: pd.DataFrame):
 
 
 # -------------------------------------------------------------------
-# 3. Build and show the chart
+# 3. Build and show chart
 # -------------------------------------------------------------------
 fig = build_figure(df_plot)
 st.plotly_chart(fig, use_container_width=True)
